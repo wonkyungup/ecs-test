@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - aws --version
-      - aws ecr get-login-password --region us-east-1
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 778906112548.dkr.ecr.us-east-1.amazonaws.com
       - npm install
   build:
     commands:
