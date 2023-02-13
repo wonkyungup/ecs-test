@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - aws --version
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 778906112548.dkr.ecr.us-east-1.amazonaws.com
+      - npm install
+  build:
+    commands:
+      - docker build -t 778906112548.dkr.ecr.us-east-1.amazonaws.com/vue-example:latest .
+  post_build:
+    commands:
+      - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/vue-example:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"vue-example-container","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/vue-example:latest > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
