@@ -12,3 +12,6 @@ phases:
   post_build:
     commands:
       - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
+      - printf '[{"name":"hello-vue-task","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > imagedefinitions.json
+  artifacts:
+    files: imagedefinitions.json
