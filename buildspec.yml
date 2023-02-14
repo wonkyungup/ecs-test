@@ -8,7 +8,7 @@ phases:
       - npm install
   build:
     commands:
-      - docker build -t 778906112548.dkr.ecr.us-east-1.amazonaws.com/vue-example:latest .
+      - docker build -t 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest .
   post_build:
     commands:
-      - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/vue-example:latest
+      - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
