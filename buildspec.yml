@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
-      - printf '[{"name":"ECS Instance - amazon-ecs-cli-setup-hello-vue","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > imagedefinitions.json
+      - printf '[{"name":"web","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
