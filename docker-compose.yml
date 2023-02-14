@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue
+    ports:
+      - "80:3000"
