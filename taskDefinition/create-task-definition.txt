@@ -1,0 +1,2 @@
+docker pull micahhausler/container-transform:latest
+cat .\docker-compose.yml | docker run --rm -i micahhausler/container-transform > <FILE_NAME>.json
