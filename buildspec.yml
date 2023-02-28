@@ -8,10 +8,10 @@ phases:
       - npm install
   build:
     commands:
-      - docker build -t 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest .
+      - docker build -t 778906112548.dkr.ecr.us-east-1.amazonaws.com/test:latest .
   post_build:
     commands:
-      - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
-      - printf '[{"name":"web","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > imagedefinitions.json
+      - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/test:latest
+      - printf '[{"name":"hello-vue","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/test:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
