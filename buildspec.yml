@@ -12,6 +12,6 @@ phases:
   post_build:
     commands:
       - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
-      - printf "{"containerDefinitions": [{"essential": true,"image": "%s","name": "web","portMappings": [{"containerPort": 3000,"hostPort": 80}]}],"family": "","volumes": []}" 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > taskDefinitions.json
+      - printf '{"containerDefinitions": [{"essential": true,"image": "%s","name": "web","portMappings": [{"containerPort": 3000,"hostPort": 80}]}],"family": "","volumes": []}' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > taskDefinitions.json
 artifacts:
     files: taskDefinitions.json
