@@ -2,4 +2,4 @@ version: 1
 task_definition:
   services:
     web:
-      mem_limit: 104217728
+      mem_limit: 128m
