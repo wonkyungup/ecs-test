@@ -1,5 +1,5 @@
-version: 1
-task_definition:
-  services:
-    web:
-      mem_limit: 128m
+# version: 1
+# task_definition:
+#   services:
+#     web:
+#       mem_limit: 128m
