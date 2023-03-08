@@ -12,7 +12,6 @@ phases:
   post_build:
     commands:
       - docker push 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest
-      - docker pull 778906112548.dkr.ecr.us-east-1.amazonaws.com/transform:latest
-      - cat docker-compose.yml | docker run --rm -i 778906112548.dkr.ecr.us-east-1.amazonaws.com/transform > taskDefinitions.json
+      - printf '[{"name":"web","imageUri":"%s"}]' 778906112548.dkr.ecr.us-east-1.amazonaws.com/hello-vue:latest > imagedefinitions.json
 artifacts:
-    files: taskDefinitions.json
+    files: imagedefinitions.json
