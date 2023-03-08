@@ -1,4 +1,4 @@
-FROM node:14-bullseye-slim
+FROM 778906112548.dkr.ecr.us-east-1.amazonaws.com/node:latest
 
 EXPOSE 3000
 
