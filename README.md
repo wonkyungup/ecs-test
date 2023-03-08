@@ -14,7 +14,7 @@
 * Configuration
 * Dependencies
 * Database configuration
-* How to run tests
+* How to run tests111
 * Deployment instructions
 
 ### Contribution guidelines ###
